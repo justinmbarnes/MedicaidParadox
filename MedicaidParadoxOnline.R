@@ -161,6 +161,8 @@ dat2 <- dat2[-which(rowMeans(is.na(dat2[,which(colnames(dat2) %in% c("ages","rac
 datu <- dat2[-which(is.na(dat2$insured2)),]
 datI <- dat2[-which(is.na(dat2$insurance.groups)),]
 
+#datI states: Delaware, DC, Georgia, Kentucky, Louisiana, Minnesota, New Mexico, Pennsylvania
+
 #modu.fpl$residuals[which(datu$insured2==0)]
 
 
@@ -310,7 +312,7 @@ summat <- rbind(as.matrix(mi),as.matrix(mi2),as.matrix(ma),as.matrix(ma),as.matr
 ### Prepare SEER Data
 
 ## Read in data
-data <- read.table("~/export-ACA-suicide.txt",sep=";",header=T,quote = "")
+data <- read.table("~/export-SEERdata.txt",sep=";",header=T,quote = "")
 
 ## make R objects for a couple objects (for defining a couple more exclusions not specified in the SEER*STAT application)
 seer.diagnoseyear <- data$X.Year.of.diagnosis.
